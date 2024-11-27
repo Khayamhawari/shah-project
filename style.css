@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Host Grotesk", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+/* details form section start from here  */
+
+.container-section {
+    margin-top: 100px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 40px; */
+}
+
+.mandatory::after {
+    content: '*';
+    color: #ff0000;
+}
+
+.main-form-div {
+    padding: 30px 55px;
+    height: 100%;
+}
+
+.form-division h3 {
+    font-size: 1.80rem;
+}
+
+.shadow {
+    box-shadow: 2px 4px 20px rgb(41, 41, 41);
+}
+
+/* .contact-details {
+    font-size: 1.40rem;
+    font-weight: 600;
+} */
+
+.form-label {
+    font-size: 1.10rem;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.form-control {
+    height: 46px;
+    width: 100%;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.20rem;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #183153;
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #183153;
+    color: #ffffff;
+    border: #183153;
+    padding-inline: 30px;
+    padding-block: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #253b5a;
+}
+
+.connect {
+    flex-direction: column;
+}
+
+.connect-socials {
+    gap: 30px;
+}
+
+.connect-socials a {
+    color: #183153;
+}
+
+.connect-socials a i {
+    font-size: 1.70rem;
+}
+
+/* #nameInput {
+    
+} */
+
+/* #errorName {
+    display: none;
+} */
+
+#main-form-tab {
+    display: block;
+}
+
+#main-form-tab.active {
+    display: none;
+}
+
+#nextBtn {
+    display: none;
+}
+
+#nextBtn.active {
+    display: block;
+}
+
+.transition-btn.animation {
+    transition: all 0.5s ease;
+}
+
+/* payment option section start from here  */
+
+.payment-details {
+    position: relative;
+    /* margin-top: 20px; */
+    padding: 20px 40px;
+    height: 50%;
+}
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+#payment-details-tab {
+    display: none;
+}
+
+#payment-details-tab.active {
+    display: block;
+}
+
+.payment-details h3 {
+    font-size: 1.70rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.barcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barcode img {
+    height: 180px;
+}
+
+.payment-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-options img {
+    height: 30px;
+    /* width: 100%; */
+}
+
+#confirmation-message {
+    display: none;
+}
+
+#confirmation-message.showmess {
+    display: block;
+    transition: all 0.4s ease;
+}
+
+
+.footer-message {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 25px;
+}
+
+.footer-message a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.footer-message a:hover {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .container {
+        padding-inline: 0;
+    }
+
+    .container-section {
+        margin-top: 50px;
+    }
+
+    .main-form-div {
+        padding: 30px 25px;
+    }
+
+    .shadow {
+        box-shadow: none;
+    }
+
+    /* .contact-details {
+        font-size: 1.30rem;
+    } */
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .footer-message {
+        font-size: 0.9rem;
+    }
+}
