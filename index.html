@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill your Details | Powered by Shahnawaz Shah</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container container-section">
+        <!-- details tab  -->
+        <div class="shadow main-form-div" id="main-form-tab">
+            <div class="form-division">
+                <h3>Fillup the Information for Contact</h3>
+                <form name="myform" id="form" method="post">
+                    <div class="name" style="margin-bottom: 15px; margin-top: 20px">
+                        <label class="form-label mandatory">Name</label>
+                        <input type="text" name="name" required class="form-control" id="nameInput"
+                            onkeyup="validateName()">
+                        <span style="color: red; font-size: 0.9rem" id="errorName"></span>
+                    </div>
+
+                    <div class="fathers-name" style="margin-bottom: 15px;">
+                        <label class="form-label mandatory">Father's Name</label>
+                        <input type="text" name="fathersname" required class="form-control" id="fathernameInput"
+                            onkeyup="validateFatherName()">
+                        <span style="color: red; font-size: 0.9rem" id="errorFatherName"></span>
+                    </div>
+                    <div class="dob" style="margin-bottom: 15px;">
+                        <label class="form-label mandatory">Date of Birth</label>
+                        <input type="date" name="dob" required class="form-control" id="dobInput"
+                            onkeyup="validateDob()">
+                        <span style="color: red; font-size: 0.9rem" id="errorDob"></span>
+                    </div>
+                    <div class="gender" style="margin-bottom: 20px; margin-top:20px;">
+                        <label class="form-label mandatory">Gender</label>
+                        <input type="text" name="gender" required class="form-control" id="genderInput"
+                            onkeyup="validateGender()">
+                        <span style="color: red; font-size: 0.9rem" id="errorGender"></span>
+                    </div>
+                    <div class="village" style="margin-bottom: 15px;">
+                        <label class="form-label mandatory">Village</label>
+                        <select name="village" required class="form-control" id="villageInput"
+                            onkeyup="validateVillage()">
+                            <option value="">Select an Option</option>
+                            <option value="anandi">Anandi</option>
+                            <option value="badagai">Badagai</option>
+                            <option value="bajarmara">Bajarmara</option>
+                            <option value="bariyatu">Bariyatu</option>
+                            <option value="barwe">Barwe</option>
+                            <option value="basati">Basati</option>
+                            <option value="bodya">Bodya</option>
+                            <option value="chakla">Chakla</option>
+                            <option value="chandwe">Chandwe</option>
+                            <option value="chuttu">Chuttu</option>
+                            <option value="dahu">Dahu</option>
+                            <option value="dahutola">Dahutola</option>
+                            <option value="dardag">Dardag</option>
+                            <option value="harchanda">Harchanda</option>
+                            <option value="hesal">Hesal</option>
+                            <option value="honchar">Honchar</option>
+                            <option value="husir">Husir</option>
+                            <option value="irba">Irba</option>
+                            <option value="kamta">Kamta</option>
+                            <option value="kanke">Kanke</option>
+                            <option value="kedal">Kedal</option>
+                            <option value="khijurtola">Khijurtola</option>
+                            <option value="knandu">Knandu</option>
+                            <option value="kuchu">Kuchu</option>
+                            <option value="kutte">Kutte</option>
+                            <option value="mandro">Mandro</option>
+                            <option value="mayapure">Mayapure</option>
+                            <option value="mesra">Mesra</option>
+                            <option value="neori">Neori</option>
+                            <option value="sildiri">Sildiri</option>
+                            <option value="tundaholi">Tundaholi</option>
+                            <option value="none">None</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span style="color: red; font-size: 0.9rem" id="errorVillage"></span>
+                    </div>
+                    <div class="qualification" style="margin-bottom: 15px;">
+                        <label class="form-label mandatory">Qualification</label>
+                        <select id="choose-qualification" name="qualification" required class="form-control">
+                            <option value="">Select an Option</option>
+                            <option value="5th">5th</option>
+                            <option value="6th">6th</option>
+                            <option value="7th">7th</option>
+                            <option value="8th">8th</option>
+                            <option value="9th">9th</option>
+                            <option value="metric">[10th] Metric</option>
+                            <option value="11th">11th</option>
+                            <option value="isc">Intermediate in Science [I.sc]</option>
+                            <option value="icom">Intermediate in Commerce [I.com]</option>
+                            <option value="ia">Intermediate in Arts [IA]</option>
+                            <option value="ug">UG</option>
+                            <option value="pg">PG</option>
+                            <option value="none">None</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span style="color: red; font-size: 0.9rem" id="errorQualification"></span>
+                    </div>
+                    <div class="email" style="margin-bottom: 15px;">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="emailInput">
+                    </div>
+                    <div class="phone" style="margin-bottom: 15px;">
+                        <label class="form-label mandatory">Phone Number</label>
+                        <input type="tel" name="phonenumber" required class="form-control" id="phoneInput"
+                            onkeyup="validatePhone()">
+                        <span style="color: red; font-size: 0.9rem" id="errorPhone"></span>
+                    </div>
+                    <div class="message" style="margin-bottom: 15px;">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" class="form-control" id="messageInput" cols="3"
+                            style="resize: none;"></textarea>
+                    </div>
+                    <div class="button" style="margin-top: 15px;">
+                        <button class="btn btn-primary contact-btn" id="doneBtn">Done</button>
+                        <span style="color: red; font-size: 0.9rem" id="errorSubmit1"></span>
+                    </div>
+                    <div class="button" style="margin-top: 15px;">
+                        <button class="btn btn-primary contact-btn transition-btn" id="nextBtn">Next For Payment <i
+                                class="ri-arrow-right-s-line"></i></button>
+                    </div>
+            </div>
+        </div>
+
+        <!-- payment details tab  -->
+        <div class="shadow payment-details" id="payment-details-tab">
+            <span class="back-btn" id="back-btn"><i class="ri-arrow-left-s-line"></i>Back</span>
+            <h3>Pay your fee via UPI only</h3>
+            <div class="barcode">
+                <img src="/Images/phonepe-scanner-shahnawaz-1.jpg" alt="Barcode Shahnawaz shah">
+            </div>
+            <div class="payment-options">
+                <img src="/Images/payment-options-1.png" alt="Payment Options UPIs">
+            </div>
+            <div class="amount" style="margin-bottom: 15px; margin-top: 20px">
+                <label class="form-label mandatory">Amount</label>
+                <input type="text" name="amount" required class="form-control" id="amountPayed"
+                    onkeyup="validateAmount()">
+                <span style="color: red; font-size: 0.9rem" id="errorAmount"></span>
+            </div>
+            <div class="transication" style="margin-bottom: 15px; margin-top: 20px">
+                <label class="form-label mandatory">Transaction Id</label>
+                <input type="text" name="transid" required class="form-control" id="transciationId"
+                    onkeyup="validateTrans()">
+                <span style="color: red; font-size: 0.9rem" id="errorTransication"></span>
+            </div>
+            <span style="text-align: center;">
+                <input type="checkbox" id="correct" value="correct-info" required>
+                <label for="correct" style="font-size: 0.9rem; color: #8b8a8a;" class="form-label">All the informations are
+                    correct</label>
+            </span>
+            <div class="button" style="margin-top: 8px;">
+                <button type="submit" class="btn btn-primary contact-btn" id="submitBtn">Final Submit</button>
+                <span style="color: red; font-size: 0.9rem" id="errorSubmitFinal"></span>
+            </div>
+            <span style="font-size: 0.9rem; color:seagreen; text-align:center; margin-top: 8px;" id="confirmation-message">I will send you a confirmation message very soon.</span>
+            <!-- <span style="font-size: 0.9rem;" class="terms-and-conditions"><a href="/terms-and-conditions.html">Terms & Conditions</a></span> -->
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="footer-message">Design & Developed by ❤️ <a href="https://khayamhawari.netlify.app/"
+                target="_blank">Khayam Hawari</a></p>
+    </div>
+
+    <!-- sweet alert script link -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/16d4deedaa.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/16d4deedaa.js" crossorigin="anonymous"></script> -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
