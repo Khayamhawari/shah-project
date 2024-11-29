@@ -152,7 +152,7 @@ function validateTrans() {
     }
 
     if (transInput.length !== 12) {
-        errorMessageforTrans.innerHTML = 'Transaction Id should be 12 digits';
+        errorMessageforTrans.innerHTML = 'Transaction Id/Refrence No or Id/UTR should be 12 digits';
         return false;
     }
 
