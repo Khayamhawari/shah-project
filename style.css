@@ -120,13 +120,6 @@ body {
     font-weight: 500;
 }
 
-/* #nameInput {
-    
-} */
-
-/* #errorName {
-    display: none;
-} */
 
 #main-form-tab {
     display: block;
@@ -135,15 +128,6 @@ body {
 #main-form-tab.active {
     display: none;
 }
-
-#nextBtn {
-    display: none;
-}
-
-#nextBtn.active {
-    display: block;
-}
-
 
 
 .transition-btn.animation {
