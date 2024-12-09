@@ -118,52 +118,63 @@
                         <textarea name="message" class="form-control" id="messageInput" cols="3"
                             style="resize: none;"></textarea>
                     </div>
-                    <div class="button" style="margin-top: 15px;">
+                    <div class="mandatory-note">
+                        <p> Bring Rs 30 for registration on the day of exam and collect your admit card at the exam
+                            centre.</p>
+                        <p> परीक्षा के दिन पंजीकरण के लिए 30 रुपये लाएं और अपना एडमिट कार्ड परीक्षा केंद्र पर ले लेंगे
+                        </p>
+                    </div>
+                    <span style="text-align: center;">
+                        <input type="checkbox" id="correct" value="correct-info" required>
+                        <label for="correct" style="font-size: 0.9rem; color: #8b8a8a;" class="form-label">All the
+                            informations are correct</label>
+                    </span>
+                    <!-- <div class="button" style="margin-top: 15px;">
                         <button class="btn btn-primary contact-btn" id="doneBtn">Done</button>
                         <span style="color: red; font-size: 0.9rem" id="errorSubmit1"></span>
+                    </div> -->
+                    <div class="button" style="margin-top: 8px;">
+                        <button type="submit" class="btn btn-primary contact-btn" id="submitBtn">Final Submit</button>
+                        <span style="color: red; font-size: 0.9rem" id="errorSubmitFinal"></span>
                     </div>
-                    <div class="button" style="margin-top: 15px;">
+                    <span style="font-size: 0.9rem; color:seagreen; text-align:center; margin-top: 8px;"
+                        id="confirmation-message">I will send you a confirmation message very soon.</span>
+                    <!-- <div class="button" style="margin-top: 15px;">
                         <button class="btn btn-primary contact-btn transition-btn" id="nextBtn">Next For Payment <i
                                 class="ri-arrow-right-s-line"></i></button>
-                    </div>
+                    </div> -->
+                </form>
             </div>
         </div>
 
         <!-- payment details tab  -->
-        <div class="shadow payment-details" id="payment-details-tab">
-            <span class="back-btn" id="back-btn"><i class="ri-arrow-left-s-line"></i>Back</span>
-            <h3>Pay your fee via UPI only</h3>
-            <div class="barcode">
+        <!-- <div class="shadow payment-details" id="payment-details-tab"> -->
+        <!-- <span class="back-btn" id="back-btn"><i class="ri-arrow-left-s-line"></i>Back</span> -->
+        <!-- <h3>Pay your fee via UPI only</h3> -->
+        <!-- <div class="barcode">
                 <img src="/Images/phonepe-scanner-shahnawaz-1.jpg" alt="Barcode Shahnawaz shah">
-            </div>
-            <div class="payment-options">
+            </div> -->
+        <!-- <div class="payment-options">
                 <img src="/Images/payment-options-1.png" alt="Payment Options UPIs">
-            </div>
-            <div class="amount" style="margin-bottom: 15px; margin-top: 20px">
+            </div> -->
+        <!-- <div class="amount" style="margin-bottom: 15px; margin-top: 20px">
                 <label class="form-label mandatory">Amount</label>
                 <input type="text" name="amount" required class="form-control" id="amountPayed"
                     onkeyup="validateAmount()">
                 <span style="color: red; font-size: 0.9rem" id="errorAmount"></span>
-            </div>
-            <div class="transication" style="margin-bottom: 15px; margin-top: 20px">
+            </div> -->
+        <!-- <div class="transication" style="margin-bottom: 15px; margin-top: 20px">
                 <label class="form-label mandatory">UPI Transaction Id</label>
                 <input type="text" name="transid" required class="form-control" id="transciationId"
                     onkeyup="validateTrans()">
                 <span style="color: red; font-size: 0.9rem" id="errorTransication"></span>
-            </div>
-            <span style="text-align: center;">
-                <input type="checkbox" id="correct" value="correct-info" required>
-                <label for="correct" style="font-size: 0.9rem; color: #8b8a8a;" class="form-label">All the informations are
-                    correct</label>
-            </span>
-            <div class="button" style="margin-top: 8px;">
-                <button type="submit" class="btn btn-primary contact-btn" id="submitBtn">Final Submit</button>
-                <span style="color: red; font-size: 0.9rem" id="errorSubmitFinal"></span>
-            </div>
-            <span style="font-size: 0.9rem; color:seagreen; text-align:center; margin-top: 8px;" id="confirmation-message">I will send you a confirmation message very soon.</span>
-            <!-- <span style="font-size: 0.9rem;" class="terms-and-conditions"><a href="/terms-and-conditions.html">Terms & Conditions</a></span> -->
-            </form>
-        </div>
+            </div> -->
+
+
+        <!-- <span style="font-size: 0.9rem;" class="terms-and-conditions"><a href="/terms-and-conditions.html">Terms & Conditions</a></span> -->
+        <!-- </div> -->
+
+
     </div>
 
     <div class="container">
@@ -173,8 +184,6 @@
 
     <!-- sweet alert script link -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/16d4deedaa.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://kit.fontawesome.com/16d4deedaa.js" crossorigin="anonymous"></script> -->
     <script src="/script.js"></script>
 </body>
 

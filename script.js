@@ -6,14 +6,14 @@ const errorMessageforGender = document.getElementById('errorGender');
 const errorMessageforVillage = document.getElementById('errorVillage');
 const errorMessageforQualification = document.getElementById('errorQualification');
 const errorMessageforPhone = document.getElementById('errorPhone');
-const errorMessageforTrans = document.getElementById('errorTransication');
-const errorAmount = document.getElementById('errorAmount');
-const errorSubmitFirst = document.getElementById('errorSubmit1');
+// const errorMessageforTrans = document.getElementById('errorTransication');
+// const errorAmount = document.getElementById('errorAmount');
+// const errorSubmitFirst = document.getElementById('errorSubmit1');
 const errorSubmitFinal = document.getElementById('errorSubmitFinal');
 
 const submitButton = document.getElementById('submitBtn');
-const nextBtn = document.getElementById('nextBtn');
-const doneBtn = document.getElementById('doneBtn');
+// const nextBtn = document.getElementById('nextBtn'); 
+// const doneBtn = document.getElementById('doneBtn');
 
 function validateName() {
     var nameInput = document.getElementById('nameInput').value;
@@ -121,49 +121,49 @@ function validatePhone() {
 }
 
 
-function validateAmount() {
-    var amountInput = document.getElementById('amountPayed').value;
+// function validateAmount() {
+//     var amountInput = document.getElementById('amountPayed').value;
 
-    if (amountInput.length == 0) {
-        errorAmount.innerHTML = 'Enter amount which you have to pay';
-        return false;
-    }
+//     if (amountInput.length == 0) {
+//         errorAmount.innerHTML = 'Enter amount which you have to pay';
+//         return false;
+//     }
 
-    if (amountInput.length < 2) {
-        errorAmount.innerHTML = 'Minimum Amount 10 rupees';
-        return false;
-    }
+//     if (amountInput.length < 2) {
+//         errorAmount.innerHTML = 'Minimum Amount 10 rupees';
+//         return false;
+//     }
 
-    if (!amountInput.match(/^[0-9]{2}$/) && !amountInput.match(/^[0-9]{3}$/) && !amountInput.match(/^[0-9]{4}$/)) {
-        errorAmount.innerHTML = 'Amount in only digits';
-        return false;
-    }
+//     if (!amountInput.match(/^[0-9]{2}$/) && !amountInput.match(/^[0-9]{3}$/) && !amountInput.match(/^[0-9]{4}$/)) {
+//         errorAmount.innerHTML = 'Amount in only digits';
+//         return false;
+//     }
 
-    errorAmount.innerHTML = '';
-    return true;
-}
+//     errorAmount.innerHTML = '';
+//     return true;
+// }
 
-function validateTrans() {
-    var transInput = document.getElementById('transciationId').value;
+// function validateTrans() {
+//     var transInput = document.getElementById('transciationId').value;
 
-    if (transInput.length == 0) {
-        errorMessageforTrans.innerHTML = 'Transaction Id is required';
-        return false;
-    }
+//     if (transInput.length == 0) {
+//         errorMessageforTrans.innerHTML = 'Transaction Id is required';
+//         return false;
+//     }
 
-    if (transInput.length !== 12) {
-        errorMessageforTrans.innerHTML = 'Transaction Id/Refrence No or Id/UTR should be 12 digits';
-        return false;
-    }
+//     if (transInput.length !== 12) {
+//         errorMessageforTrans.innerHTML = 'Transaction Id/Refrence No or Id/UTR should be 12 digits';
+//         return false;
+//     }
 
-    if (!transInput.match(/^[0-9]{12}$/)) {
-        errorMessageforTrans.innerHTML = 'Only digits';
-        return false;
-    }
+//     if (!transInput.match(/^[0-9]{12}$/)) {
+//         errorMessageforTrans.innerHTML = 'Only digits';
+//         return false;
+//     }
 
-    errorMessageforTrans.innerHTML = '';
-    return true;
-}
+//     errorMessageforTrans.innerHTML = '';
+//     return true;
+// }
 
 // alert('Name is required');
 
@@ -174,48 +174,39 @@ function validateTrans() {
 
 
 // tabs changed
-const formDetailsTab = document.getElementById('main-form-tab');
-const paymentDisplayTab = document.getElementById('payment-details-tab');
+// const formDetailsTab = document.getElementById('main-form-tab');
+// const paymentDisplayTab = document.getElementById('payment-details-tab');
 
-doneBtn.addEventListener('click', () => {
+// doneBtn.addEventListener('click', () => {
     // console.log('Done is working');
-    if (!validateName() || !validateFatherName() || !validateDob() || !validateGender() || !validatePhone()) {
-        errorSubmitFirst.style.display = 'block';
-        errorSubmitFirst.innerHTML = 'Please fill required feilds';
-        setTimeout(() => {
-            errorSubmitFirst.style.display = 'none';
-        }, 8000);
-        console.log('Something worng!');
-        // nextBtn.style.display = 'none';
-        return false;
-    }
-    else {
-        nextBtn.classList.add('active');
-        nextBtn.classList.add('animation');
-        console.log('show next btn');
-        return true;
-    }
+  
+    // else {
+    //     nextBtn.classList.add('active');
+    //     nextBtn.classList.add('animation');
+    //     console.log('show next btn');
+    //     return true;
+    // }
     // nextBtn.classList.remove('animation');
-})
+// })
 
-nextBtn.addEventListener('click', () => {
-    formDetailsTab.classList.add('active');
-    paymentDisplayTab.classList.add('active');
-    console.log('tab changed');
-});
+// nextBtn.addEventListener('click', () => {
+//     formDetailsTab.classList.add('active');
+//     paymentDisplayTab.classList.add('active');
+//     console.log('tab changed');
+// });
 
 
 // back to details tab 
-const backText = document.getElementById('back-btn');
+// const backText = document.getElementById('back-btn');
 
-backText.addEventListener('click', () => {
-    paymentDisplayTab.classList.remove('active');
-    formDetailsTab.classList.remove('active');
-    // console.log('Working');
-    backText.classList.add('active')
-    console.log('successfuly back into details');
+// backText.addEventListener('click', () => {
+//     paymentDisplayTab.classList.remove('active');
+//     formDetailsTab.classList.remove('active');
+//     // console.log('Working');
+//     backText.classList.add('active')
+//     console.log('successfuly back into details');
 
-});
+// });
 
 const confirmMess = document.getElementById('confirmation-message');
 
@@ -224,15 +215,26 @@ const form = document.querySelector('#form');
 const url = 'https://script.google.com/macros/s/AKfycbxjHD2umZaQQtFS8REcyKFFH0enarzK1gnE8lv9ZJ--P3MA_kmwvHaBqgU0oP_sgJMgeQ/exec';
 
 submitButton.addEventListener('click', (e) => {
-    if (!validateAmount() || !validateTrans()) {
+    if (!validateName() || !validateFatherName() || !validateDob() || !validateGender() || !validatePhone()) {
         errorSubmitFinal.style.display = 'block';
         errorSubmitFinal.innerHTML = 'Please fill required feilds';
         setTimeout(() => {
             errorSubmitFinal.style.display = 'none';
-        }, 5000);
-        console.log('Wrong!');
+        }, 8000);
+        console.log('Something worng!');
+        // nextBtn.style.display = 'none';
         return false;
     }
+
+    // if (!validateAmount() || !validateTrans()) {
+    //     errorSubmitFinal.style.display = 'block';
+    //     errorSubmitFinal.innerHTML = 'Please fill required feilds';
+    //     setTimeout(() => {
+    //         errorSubmitFinal.style.display = 'none';
+    //     }, 5000);
+    //     console.log('Wrong!');
+    //     return false;
+    // }
 
     console.log('working submit btn');
     let d = new FormData(form);

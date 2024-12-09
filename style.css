@@ -108,6 +108,18 @@ body {
     font-size: 1.70rem;
 }
 
+.mandatory-note {
+    margin-top: 10px;
+    margin-bottom: 12px;
+
+}
+
+.mandatory-note p {
+    font-size: 0.9rem;
+    color: red;
+    font-weight: 500;
+}
+
 /* #nameInput {
     
 } */
@@ -131,6 +143,8 @@ body {
 #nextBtn.active {
     display: block;
 }
+
+
 
 .transition-btn.animation {
     transition: all 0.5s ease;
